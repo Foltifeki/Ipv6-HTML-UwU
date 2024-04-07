@@ -36,16 +36,20 @@
             <div class="p-4">
                 <h2 class="text-xl font-bold">Az IPv6-ra átállás</h2>
                 <p class="text-balance">Az IPv6-ra való átállás szükségessége abból adódik, hogy az internet zökkenőmentesen bővülhessen, és a jövőben az emberek által használt összes eszközt betudja fogadni. Az IPv6-ra való átállás minden téren pénzbe kerül. (hardver és szoftver) Az internetszolgáltatónak frissítenie kell infrastruktúráját az IPv6 támogatásához. Ennek eredményeképpen az internet hatékonyabbá, biztonságosabbá, gyorsabbá és jövőállóbbá válik.</p>
+
+                <div class="mt-4 text-balance">
+                    <h2 class="text-xl font-bold">Címstruktúra</h2>
+                    <p>Az IPv6 címek 128 bitesek, ami nagymértékben megnöveli a lehetséges címtartományt. Az IPv6 címek mérete és formátuma kiterjeszti a címzési képességet. 
+                    Az előnyben részesített IPv6 címábrázolás az <b>x:x:x:x:x:x:x:x</b>, ahol minden x a cím nyolc 16-bites részének hexadecimális értéke. 
+                    Az IPv6 címek <b>0000:0000:0000:0000:0000:0000:0000:0000</b> és <b>ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff</b> között lehetnek.</p>
+                </div>
             </div>
             <div class="p-4 mr-15">
                 <img class="max-w-64 rounded-2xl float-right" src="https://cdn.discordapp.com/attachments/1174252511293616158/1226312203204825138/OIG2_2-topaz-low_resolution-4x.jpg?ex=66244f3d&is=6611da3d&hm=39d9c7099640dfa450aadb2f6a5b3df9d4f0a5c2559df135548fa59a1b62d357&" alt="">
             </div>
         </div>
         <div class="p-4">
-            <h2 class="text-xl font-bold">Címstruktúra</h2>
-            <p>Az IPv6 címek 128 bitesek, ami nagymértékben megnöveli a lehetséges címtartományt. Az IPv6 címek mérete és formátuma kiterjeszti a címzési képességet. 
-            Az előnyben részesített IPv6 címábrázolás az <b>x:x:x:x:x:x:x:x</b>, ahol minden x a cím nyolc 16-bites részének hexadecimális értéke. 
-            Az IPv6 címek <b>0000:0000:0000:0000:0000:0000:0000:0000</b> és <b>ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff</b> között lehetnek.</p>
+            
 
             <p>Az IPv6-címek több típusra oszthatóak a fő címzési és útválasztási módszertanok alkalmazásai szerint:</p>
                 <ul class="list-disc list-inside mb-4">
@@ -55,13 +59,14 @@
                 </ul> 
                 <p>Mindhárom esetben több címformátum azonosítható a 128 címbit logikai bitcsoportokra osztásával, és szabályok felállításával ezen bitcsoportok értékeinek a speciális címzési tulajdonságokkal való társításához.</p>
         </div>
+        <div class="p-4">
+            <h2>Az IPv6 címek több típusra oszthatóak:</h2>
+            <ul class="list-disc list-inside">
+                <li><b>Unicast címek:</b> Egy egyedi hálózati interfészt azonosítanak. <p class="ml-6">Az internetprotokoll az unicast címre küldött csomagokat a megfelelő egyedi interfésznek továbbítja.</p></li>
+                <li><b>Anycast címek:</b> Egy csoport interfészhez vannak hozzárendelve, amelyek általában különböző csomópontokhoz tartoznak. <p class="ml-6">Egy anycast címre küldött csomagot a tag-interfészek egyike kapja csak meg, általában a legközelebbi hoszt.</p></li>
+                <li><b>Multicast címek:</b> A multicast címre küldött csomag minden olyan interfészhez eljutnak, amely csatlakozik a megfelelő multicasthoz.</li>
+            </ul>
+        </div>
     </main>
 </body>
 </html>
-
-Az IPv6 címek több típusra oszthatóak a fő címzési és útválasztási módszertanok alkalmazásai szerint12:
-
-Unicast címek: Egy egyedi hálózati interfészt azonosítanak1. Az internetprotokoll az unicast címre küldött csomagokat a megfelelő egyedi interfésznek továbbítja1.
-Anycast címek: Egy csoport interfészhez vannak hozzárendelve, amelyek általában különböző csomópontokhoz tartoznak1. Egy anycast címre küldött csomagot a tag-interfészek egyike kapja csak meg, jellemzően a legközelebbi hoszt1.
-Multicast címek: Szintén több hoszt használja, amelyek a multicast cél státuszukat a hálózati útválasztók közti multicast elosztási protokollban való részvételükkel biztosítják1. A multicast címre küldött csomag minden olyan interfészhez eljut, amely csatlakozott a megfelelő multicast csoporthoz1.
- 
