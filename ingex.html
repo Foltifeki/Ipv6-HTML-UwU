@@ -15,19 +15,19 @@
     <main class="p-4 rounded-2xl bg-slate-100/60 shadow-xl mt-20 mx-auto max-w-5xl">
         <div class="p-4 mb-6">
             <h2 class="text-xl font-bold">Az IPv6 Története</h2>
-            <p>Az IPv6, azaz az Internet Protocol 6-os verziója az Internet Protokoll új kiadása, amely az Internet Protocol 4-es verzióját (IPv4) kívánja felváltani. Az IETF (Internet Engineering Task Force) által kezdeményezett kutatások célja az volt, hogy új protokollokat dolgozzanak ki a IPv4 címtér kimerülése miatt.</p>
+            <p>Az IPv6,az Internet Protocol 6-os verziója, amely az Internet Protocol 4-es verzióját (IPv4) váltja fel. Az IETF (Internet Engineering Task Force) által kezdeményezett kutatások célja az volt, hogy új protokollokat dolgozzanak ki a IPv4 címtér kimerülése miatt.</p>
 
-            <p>Az első IPv6 szabvány 1992 decemberében készült el, és az IPv6 protokoll, amelyet ma ismerünk, 1994-ben vált hivatalossá hét iteráció után, amit az Internet Engineering Steering Group 1994. november 17-én ajánlott használatra.</p>
+            <p>Az első IPv6 szabvány 1992 decemberében készült el, amelyet ma ismerünk, 1994-ben vált hivatalossá amit az Internet Engineering Steering Group 1994. november 17-én ajánlott használatra.</p>
 
             <p>Június 8-án olyan ismert tartalomszolgáltatók, mint a Google, a Facebook és a Yahoo, globális tesztnapot hirdettek meg az "IPv6 világnapja" elnevezéssel. A BME Folyamatirányítási Irodája már 1997-ben kutatásokat végzett az IPv6 hálózatok tesztelésével kapcsolatban. Az IPv6 kísérletei 2001-ben kezdődtek az NIIF által működtetett és fejlesztett Felsőoktatási Kutatóhálózaton, majd 2005-től elérhetővé vált az IPv6 szolgáltatás egyetemek, kutatóintézetek és közgyűjtemények számára.</p>
 
-            <p>Az IPv6 bevezetése az interneten 2011-ben történt meg, az IPv4-et felváltva, mivel az IPv4 IP-címek már a kimerülés szélén álltak. Az IPv6 általános bevezetése világszerte még csak az első lépéseknél jár.</p>
+            <p>Az IPv6 bevezetése az interneten 2011-ben történt meg, az IPv4-et felváltva, mivel az IPv4 IP-címek már a kimerülés szélén állt. Az IPv6 általános bevezetése világszerte még csak az első lépéseknél jár.</p>
         </div>
         <div class="p-4 mb-6 text-balance">
             <h2 class="text-xl font-bold">Az IPv4 korlátai:</h2>
-            <ul class="list-disc list-outside">
+            <ul class="list-disc list-inside">
                 <li><b>Elfogytak az IPv4-címek:</b> Az IPv4 korlátozott számú egyedi nyilvános címmel rendelkezik.</li>
-                <li><b>Megnövekedett irányítótábla méret:</b> Az internetre csatlakozó szerverek számának növekedésével növekszik a hálózati útvonalak száma.</li>
+                <li><b>Megnövekedett irányítótábla méret:</b> Az internetre csatlakozó szerverek számának növekedésével növekszik az útvonalak száma.</li>
                 <li><b>Biztonsági korlátok:</b> Az IPv4 biztonsági funkciói nem kötelezőek, és a biztonsági megoldások implementálása gyakran bonyolult.</li>
                 <li><b>Skálázhatósági problémák:</b> Az IPv4 nem tudja hatékonyan kezelni a nagy hálózatokat, és a hálózati topológiák változásait.</li>
             </ul>
@@ -37,16 +37,31 @@
                 <h2 class="text-xl font-bold">Az IPv6-ra átállás</h2>
                 <p class="text-balance">Az IPv6-ra való átállás szükségessége abból adódik, hogy az internet zökkenőmentesen bővülhessen, és a jövőben az emberek által használt összes eszközt betudja fogadni. Az IPv6-ra való átállás minden téren pénzbe kerül. (hardver és szoftver) Az internetszolgáltatónak frissítenie kell infrastruktúráját az IPv6 támogatásához. Ennek eredményeképpen az internet hatékonyabbá, biztonságosabbá, gyorsabbá és jövőállóbbá válik.</p>
             </div>
-            <div class="p-4 mr-10">
-                <img class="max-w-80 rounded-2xl float-right" src="https://cdn.discordapp.com/attachments/1174252511293616158/1226312203204825138/OIG2_2-topaz-low_resolution-4x.jpg?ex=66244f3d&is=6611da3d&hm=39d9c7099640dfa450aadb2f6a5b3df9d4f0a5c2559df135548fa59a1b62d357&" alt="">
+            <div class="p-4 mr-15">
+                <img class="max-w-64 rounded-2xl float-right" src="https://cdn.discordapp.com/attachments/1174252511293616158/1226312203204825138/OIG2_2-topaz-low_resolution-4x.jpg?ex=66244f3d&is=6611da3d&hm=39d9c7099640dfa450aadb2f6a5b3df9d4f0a5c2559df135548fa59a1b62d357&" alt="">
             </div>
-            
+        </div>
+        <div class="p-4">
+            <h2 class="text-xl font-bold">Címstruktúra</h2>
+            <p>Az IPv6 címek 128 bitesek, ami nagymértékben megnöveli a lehetséges címtartományt. Az IPv6 címek mérete és formátuma kiterjeszti a címzési képességet. 
+            Az előnyben részesített IPv6 címábrázolás az <b>x:x:x:x:x:x:x:x</b>, ahol minden x a cím nyolc 16-bites részének hexadecimális értéke. 
+            Az IPv6 címek <b>0000:0000:0000:0000:0000:0000:0000:0000</b> és <b>ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff</b> között lehetnek.</p>
 
-            
+            <p>Az IPv6-címek több típusra oszthatóak a fő címzési és útválasztási módszertanok alkalmazásai szerint:</p>
+                <ul class="list-disc list-inside mb-4">
+                    <li>unicast</li>
+                    <li>multicast</li>
+                    <li>anycast</li>
+                </ul> 
+                <p>Mindhárom esetben több címformátum azonosítható a 128 címbit logikai bitcsoportokra osztásával, és szabályok felállításával ezen bitcsoportok értékeinek a speciális címzési tulajdonságokkal való társításához.</p>
         </div>
     </main>
 </body>
 </html>
 
- 
+Az IPv6 címek több típusra oszthatóak a fő címzési és útválasztási módszertanok alkalmazásai szerint12:
+
+Unicast címek: Egy egyedi hálózati interfészt azonosítanak1. Az internetprotokoll az unicast címre küldött csomagokat a megfelelő egyedi interfésznek továbbítja1.
+Anycast címek: Egy csoport interfészhez vannak hozzárendelve, amelyek általában különböző csomópontokhoz tartoznak1. Egy anycast címre küldött csomagot a tag-interfészek egyike kapja csak meg, jellemzően a legközelebbi hoszt1.
+Multicast címek: Szintén több hoszt használja, amelyek a multicast cél státuszukat a hálózati útválasztók közti multicast elosztási protokollban való részvételükkel biztosítják1. A multicast címre küldött csomag minden olyan interfészhez eljut, amely csatlakozott a megfelelő multicast csoporthoz1.
  
