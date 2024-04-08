@@ -56,6 +56,39 @@
                 <li><b>Multicast címek:</b> A multicast címre küldött csomag minden olyan interfészhez eljutnak, amely csatlakozik a megfelelő multicasthoz.</li>
             </ul>
         </div>
+        <div>
+            <p>Az ICMPv6 (Internet Control Message Protocol version 6) hibajelentési és diagnosztikai funkciókat lát el.</p>
+            <p>Az ICMPv6 üzenetek hibajelentő és információs üzenetekre oszthatóak. Az ICMPv6 üzeneteket IPv6 csomagok szállítják, amelyekben az IPv6 Next Header értéke az ICMPv6 számára 58-ra van beállítva.</p>
+            <div>
+                <p>Az ICMPv6 üzenetek a következő alapvető üzenettípusokat tartalmazzák:</p>
+                <ul>
+                    <li>Hibajelentő üzenetek:</li>
+                    <ul>
+                        <li>Célállomás elérhetetlen: Nincs útvonal a célállomáshoz, a célállomással való kommunikációt adminisztratív okokból tiltották, stb2.</li>
+                        <li>Csomag túl nagy: A csomag mérete meghaladja a hálózati útvonal maximális átviteli egységét2.</li>
+                        <li>Időtúllépés: Az élettartam lejárt, vagy a fragmentáció időkorlátja lejárt2.</li>
+                        <li>Paraméterprobléma: Hibás fejlécmező található a csomagban2.</li>
+                    </ul>
+                    <li>Információs üzenetek:</li>
+                    <ul>
+                        <li>Echo kérés: Ping kéréshez használt üzenet2.</li>
+                        <li>Echo válasz: Ping válaszhoz használt üzenet2.</li>
+                    </ul>
+                </ul>
+            </div>
+        </div>
     </main>
 </body>
 </html>
+
+
+Az ICMPv6 üzenetek a következő alapvető üzenettípusokat tartalmazzák2:
+
+Hibajelentő üzenetek:
+Célállomás elérhetetlen: Nincs útvonal a célállomáshoz, a célállomással való kommunikációt adminisztratív okokból tiltották, stb2.
+Csomag túl nagy: A csomag mérete meghaladja a hálózati útvonal maximális átviteli egységét2.
+Időtúllépés: Az élettartam lejárt, vagy a fragmentáció időkorlátja lejárt2.
+Paraméterprobléma: Hibás fejlécmező található a csomagban2.
+Információs üzenetek:
+Echo kérés: Ping kéréshez használt üzenet2.
+Echo válasz: Ping válaszhoz használt üzenet2.
