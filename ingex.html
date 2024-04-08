@@ -6,15 +6,15 @@
     <title>IPV6</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="p-4 bg-blue-300">
+<body class="p-4 text-black dark:text-white bg-gradient-to-r from-sky-300 to-indigo-300 dark:from-sky-800 dark:to-indigo-800">
     <header>
-        <div class="text-center p-6 max-w-2xl mx-auto mt-6 mb-6 rounded-2xl bg-slate-100/60 shadow-xl">
+        <div class="text-center p-6 max-w-2xl mx-auto mt-6 mb-6 rounded-2xl bg-slate-100/60 dark:bg-slate-800/60 shadow-xl">
             <h1 class="text-3xl font-bold">IPv6 Minden</h1>
         </div>
     </header>
-    <main class="p-4 rounded-2xl bg-slate-100/60 shadow-xl mt-20 mx-auto max-w-5xl">
+    <main class="p-4 rounded-2xl bg-slate-100/60 dark:bg-slate-800/60 shadow-xl mt-20 mx-auto max-w-5xl">
         <div class="p-4 mb-6">
-            <h2 class="text-xl font-bold mb-4">Az IPv6 Története</h2>
+            <h2 class="text-2xl font-bold mb-4">Az IPv6 Története</h2>
             <p>Az IPv6,az Internet Protocol 6-os verziója, amely az Internet Protocol 4-es verzióját (IPv4) váltja fel. Az IETF (Internet Engineering Task Force) által kezdeményezett kutatások célja az volt, hogy új protokollokat dolgozzanak ki a IPv4 címtér kimerülése miatt.</p>
 
             <p>Az első IPv6 szabvány 1992 decemberében készült el, amelyet ma ismerünk, 1994-ben vált hivatalossá amit az Internet Engineering Steering Group 1994. november 17-én ajánlott használatra.</p>
@@ -24,7 +24,7 @@
             <p>Az IPv6 bevezetése az interneten 2011-ben történt meg, az IPv4-et felváltva, mivel az IPv4 IP-címek már a kimerülés szélén állt. Az IPv6 általános bevezetése világszerte még csak az első lépéseknél jár.</p>
         </div>
         <div class="p-4 mb-6 text-balance">
-            <h2 class="text-xl font-bold mb-4">Az IPv4 korlátai:</h2>
+            <h2 class="text-2xl font-bold mb-4">Az IPv4 korlátai:</h2>
             <ul class="list-disc list-outside ml-5">
                 <li><b>Elfogytak az IPv4-címek:</b> Az IPv4 korlátozott számú egyedi nyilvános címmel rendelkezik.</li>
                 <li><b>Megnövekedett irányítótábla méret:</b> Az internetre csatlakozó szerverek számának növekedésével növekszik az útvonalak száma.</li>
@@ -32,27 +32,34 @@
                 <li><b>Skálázhatósági problémák:</b> Az IPv4 nem tudja hatékonyan kezelni a nagy hálózatokat, és a hálózati topológiák változásait.</li>
             </ul>
         </div>
-        <div class="flex">
-            <div class="p-4">
-                <h2 class="text-xl font-bold mb-3">Az IPv6-ra átállás</h2>
+        <div class="flex p-4">
+            <div class="">
+                <h2 class="text-2xl font-bold mb-3">Az IPv6-ra átállás</h2>
                 <p class="text-balance">Az IPv6-ra való átállás szükségessége abból adódik, hogy az internet zökkenőmentesen bővülhessen, és a jövőben az emberek által használt összes eszközt betudja fogadni. Az IPv6-ra való átállás minden téren pénzbe kerül. (hardver és szoftver) Az internetszolgáltatónak frissítenie kell infrastruktúráját az IPv6 támogatásához. Ennek eredményeképpen az internet hatékonyabbá, biztonságosabbá, gyorsabbá és jövőállóbbá válik.</p>
 
                 <div class="mt-5 text-balance">
-                    <h2 class="text-xl font-bold mb-2">Címstruktúra</h2>
-                    <p> Az IPv6 címek 128 bitből állnak, ami nagymértékben megnöveli a lehetséges címtartományt.  Az IPv6-címeket 8 csoportra osztják, ahol minden csoport 4 hexadecimális számjegyből áll. A csoportokat kettősponttal választják el egymástól.
-                    Az előnyben részesített IPv6 címábrázolás az <b>x:x:x:x:x:x:x:x</b>, ahol minden x a cím nyolc 16-bites részének hexadecimális értéke. 
-                    Az IPv6 címek <b>0000:0000:0000:0000:0000:0000:0000:0000</b> és <b>ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff</b> között lehetnek.</p>
+                    <h2 class="text-2xl font-bold mb-2">Címstruktúra</h2>
+                    <p> Az IPv6 címek 128 bitből állnak, ami nagymértékben megnöveli a lehetséges címtartományt.  Az IPv6-címeket 8 csoportra osztják, ahol minden csoport 4 hexadecimális számjegyből áll. A csoportokat kettősponttal választják el egymástól.</p>
+
+                    <p class="mt-2 mb-2">Az előnyben részesített IPv6 címábrázolása: <b class="bg-white/75 dark:bg-black/60 rounded-md p-1 mx-2"> <a class="p-2">X:X:X:X:X:X:X:X</a> </b> </p>
+                    
+                    <p>Ahol minden x a cím nyolc 16-bites részének hexadecimális értéke.</p>
                 </div>
             </div>
-            <div class="p-4 mr-15">
-                <img class="max-w-64 rounded-2xl float-right mt-20" src="https://cdn.discordapp.com/attachments/1174252511293616158/1226312203204825138/OIG2_2-topaz-low_resolution-4x.jpg?ex=66244f3d&is=6611da3d&hm=39d9c7099640dfa450aadb2f6a5b3df9d4f0a5c2559df135548fa59a1b62d357&" alt="">
+            <div class=" mx-auto my-auto my-auto">
+                <img class="max-w-72 rounded-2xl float-right" src="https://cdn.discordapp.com/attachments/1174252511293616158/1226312203204825138/OIG2_2-topaz-low_resolution-4x.jpg?ex=66244f3d&is=6611da3d&hm=39d9c7099640dfa450aadb2f6a5b3df9d4f0a5c2559df135548fa59a1b62d357&" alt="IPv6-Chan">
             </div>
         </div>
         <div class="p-4">
+                    <p class="mt-2 mb-2"> <b>Legkisebb:</b> <b class="bg-white/75 dark:bg-black/60 rounded-md p-1 mx-2"> <a class="p-2">0000:0000:0000:0000:0000:0000:0000:0000</a> </b> 
+                    <b class="ml-12">Legnagyobb:</b><b class="bg-white/75 dark:bg-black/60 rounded-md p-1 mx-2"> <a class="p-2">ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff</a></b></p>
+        </div>
+        <div class="p-4">
             <h2></h2>
-            <p>Az IPv6 címek számolása során a címeket hexadecimális formában ábrázolják, ahol minden hexadecimális számjegy 4 bitet képvisel. Ez azt jelenti, hogy minden hexadecimális számjegy 16 lehetséges értéket képvisel (0-9 és A-F), ami összesen 4 bitet jelent. Tehát egy 4 hexadecimális számjegyből álló csoport összesen 16^4, azaz 65,536 lehetséges értéket képvisel.</p>
+            <p class="mb-3">Az IPv6 címek számolása során a címeket hexadecimális formában ábrázolják, ahol minden hexadecimális számjegy 4 bitet képvisel. Ez azt jelenti, hogy minden hexadecimális számjegy 16 lehetséges értéket képvisel (0-9 és A-F), ami összesen 4 bitet jelent. Tehát egy 4 hexadecimális számjegyből álló csoport összesen 16^4, azaz 65,536 lehetséges értéket képvisel.</p>
 
-            <p class="mb-6">z IPv6 címek kiosztása során a címeket hierarchikusan osztják ki, ahol a bal oldali bitcsoportok a hálózati részt, míg a jobb oldali bitcsoportok a hoszt részt képviselik. Ez lehetővé teszi a címek logikus csoportosítását és az útválasztási hatékonyság növelését.</p>
+            <p class="mb-6">Az IPv6 címek kiosztása során a címeket hierarchikusan osztják ki, ahol a bal oldali bitcsoportok a hálózati részt, míg a jobb oldali bitcsoportok a hoszt részt képviselik. Ez lehetővé teszi a címek logikus csoportosítását és az útválasztási hatékonyság növelését.</p>
+
             <div class="flex bg-white rounded-2xl p-4">
                 <div class="">
                     <img src="https://cdn.discordapp.com/attachments/1205431235564797992/1226837777728016485/1280px-IPv6_address_terminology-en.svg_.png?ex=662638b7&is=6613c3b7&hm=fb96cf2474f5ecbe0749af9e622b6e20e0713f7f6cdd014610cae4d461fd4066&" alt="">
@@ -64,14 +71,14 @@
         </div>
         <div class="p-4">
             <h2 class="text-xl font-bold mb-4">Az IPv6 címek több típusra oszthatóak:</h2>
-            <ul class="list-disc list-outside ml-5">
+            <ul class="list-disc list-outside ml-5 text-balance">
                 <li><b>Unicast címek:</b> Egy egyedi hálózati interfészt azonosítanak. Az internetprotokoll az unicast címre küldött csomagokat a megfelelő egyedi interfésznek továbbítja.</li>
                 <li><b>Anycast címek:</b> Egy csoport interfészhez vannak hozzárendelve, amelyek általában különböző csomópontokhoz tartoznak. Egy anycast címre küldött csomagot a tag-interfészek egyike kapja csak meg, általában a legközelebbi hoszt.</li>
                 <li><b>Multicast címek:</b> A multicast címre küldött csomag minden olyan interfészhez eljutnak, amely csatlakozik a megfelelő multicasthoz.</li>
             </ul>
         </div>
-        <div class="p-4">
-            <h2 class="text-xl font-bold mb-4">ICMPv6 (Internet Control Message Protocol version 6)</h2>
+        <div class="p-4 mt-10">
+            <h2 class="text-2xl font-bold mb-4">ICMPv6 (Internet Control Message Protocol version 6)</h2>
             <p>Az ICMPv6 hibajelentési és diagnosztikai funkciókat látja el. Az ICMPv6 üzenetek hibajelentő és információs üzenetekre oszthatóak. Az ICMPv6 üzeneteket IPv6 csomagok szállítják, amelyekben az IPv6 Next Header értéke az ICMPv6 számára 58-ra van beállítva.</p>
             <div class="mt-5">
                 <p class="font-bold text-xl mb-4">Az ICMPv6 üzenetek a következő alapvető üzenettípusokat tartalmazzák:</p>
@@ -91,10 +98,10 @@
                 </ul>
             </div>
         </div>
-        <div class="p-4">
-            <h2 class="text-xl font-bold mb-4">Az IPv6 Neighbor Discovery Protocol (NDP)</h2>
+        <div class="p-4 mt-10">
+            <h2 class="text-2xl font-bold mb-4">Az IPv6 Neighbor Discovery Protocol (NDP)</h2>
             <p class="mb-3">Az ICMPv6 részeként működő Neighbor Discovery Protocol (NDP) az IPv6 hálózatokban használt kulcsfontosságú protokoll. Az NDP az alábbi funkciókat látja el:</p>
-            <ul class="list-disc list-outside ml-5">
+            <ul class="list-disc list-outside ml-5 text-balance">
                 <li><b>Router Solicitation (Type 133):</b>A hosztok ezzel az üzenettel kérdezik le a hálózaton található útválasztókat.</li>
                 <li><b>Router Advertisement (Type 134):</b>Az útválasztók ezzel az üzenettel hirdetik meg jelenlétüket és a hálózati paramétereket.</li>
                 <li><b>Neighbor Solicitation (Type 135):</b> Amikor egy csomópontnak szüksége van egy ismert IPv6 cím fizikai címének meghatározására, akkor ezt az üzenetet küldi ki a hálózati szegmensre.</li>
@@ -113,13 +120,13 @@
             </ul>
             <p class="mt-3">Ezek a protokollok lehetővé teszik az IPv6 hálózatok számára, hogy dinamikusan tanulják és frissítsék az útvonalakat.</p>
         </div>
-        <div class="p-4">
+        <div class="p-4 mt-10">
             <div class="flex">
-                <div>
-                    <img class="max-w-72 rounded-2xl float-right" src="https://cdn.discordapp.com/attachments/1205431235564797992/1226823233173721149/OIG3-topaz-low_resolution-4x.jpg?ex=66262b2c&is=6613b62c&hm=619959ae4141f0e7fd92263e628b3d270bb815d46d076d937a7917de2bb1e1d2&" alt="">
+                <div class="mx-auto my-auto">
+                    <img class="max-w-72 rounded-2xl float-right" src="https://cdn.discordapp.com/attachments/1205431235564797992/1226823233173721149/OIG3-topaz-low_resolution-4x.jpg?ex=66262b2c&is=6613b62c&hm=619959ae4141f0e7fd92263e628b3d270bb815d46d076d937a7917de2bb1e1d2&" alt="IPv6-Chan">
                 </div>
                 <div class="ml-12">
-                    <h2 class="text-xl font-bold mb-4">Biztonság</h2>
+                    <h2 class="text-2xl font-bold mb-4">Biztonság</h2>
                     <p class="font-bold">Az IPv6 biztonsági kihívásai:</p>
                     <ul class="list-disc list-outside ml-5">
                         <li><b>Bonyolultság:</b> Az IPv6 címzési rendszere és a fejlettebb funkciók, mint például az Extension Headers, bonyolultabbá teszik a hálózatot, ami növeli a hibák és a biztonsági rések kockázatát.</li>
@@ -156,6 +163,11 @@
 
         </div>
     </main>
+    <footer class="text-center p-4 max-w-3xl mx-auto mt-6 mb-6 rounded-2xl bg-slate-100/60 dark:bg-slate-800/60 shadow-xl">
+        <div>
+            <p>Források: <a href="https://www.cisco.com/c/en/us/support/ios-nx-os-software/ios-xe-16/products-installation-and-configuration-guides-list.html">Cisco.com</a>, <a href="https://contenthub.netacad.com/legacy/CCNA/ITN/5.02/hu/course/module6/6.1.4.1/">Netacad</a>, <a href="https://en.wikipedia.org/wiki/IPv6">Wikipédia</a></p>
+        </div>
+    </footer>
 </body>
 </html>
 
