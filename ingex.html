@@ -14,7 +14,7 @@
     </header>
     <main class="p-4 rounded-2xl bg-slate-100/60 shadow-xl mt-20 mx-auto max-w-5xl">
         <div class="p-4 mb-6">
-            <h2 class="text-xl font-bold">Az IPv6 Története</h2>
+            <h2 class="text-xl font-bold mb-4">Az IPv6 Története</h2>
             <p>Az IPv6,az Internet Protocol 6-os verziója, amely az Internet Protocol 4-es verzióját (IPv4) váltja fel. Az IETF (Internet Engineering Task Force) által kezdeményezett kutatások célja az volt, hogy új protokollokat dolgozzanak ki a IPv4 címtér kimerülése miatt.</p>
 
             <p>Az első IPv6 szabvány 1992 decemberében készült el, amelyet ma ismerünk, 1994-ben vált hivatalossá amit az Internet Engineering Steering Group 1994. november 17-én ajánlott használatra.</p>
@@ -24,8 +24,8 @@
             <p>Az IPv6 bevezetése az interneten 2011-ben történt meg, az IPv4-et felváltva, mivel az IPv4 IP-címek már a kimerülés szélén állt. Az IPv6 általános bevezetése világszerte még csak az első lépéseknél jár.</p>
         </div>
         <div class="p-4 mb-6 text-balance">
-            <h2 class="text-xl font-bold">Az IPv4 korlátai:</h2>
-            <ul class="list-disc list-inside">
+            <h2 class="text-xl font-bold mb-4">Az IPv4 korlátai:</h2>
+            <ul class="list-disc list-outside ml-5">
                 <li><b>Elfogytak az IPv4-címek:</b> Az IPv4 korlátozott számú egyedi nyilvános címmel rendelkezik.</li>
                 <li><b>Megnövekedett irányítótábla méret:</b> Az internetre csatlakozó szerverek számának növekedésével növekszik az útvonalak száma.</li>
                 <li><b>Biztonsági korlátok:</b> Az IPv4 biztonsági funkciói nem kötelezőek, és a biztonsági megoldások implementálása gyakran bonyolult.</li>
@@ -34,61 +34,129 @@
         </div>
         <div class="flex">
             <div class="p-4">
-                <h2 class="text-xl font-bold">Az IPv6-ra átállás</h2>
+                <h2 class="text-xl font-bold mb-3">Az IPv6-ra átállás</h2>
                 <p class="text-balance">Az IPv6-ra való átállás szükségessége abból adódik, hogy az internet zökkenőmentesen bővülhessen, és a jövőben az emberek által használt összes eszközt betudja fogadni. Az IPv6-ra való átállás minden téren pénzbe kerül. (hardver és szoftver) Az internetszolgáltatónak frissítenie kell infrastruktúráját az IPv6 támogatásához. Ennek eredményeképpen az internet hatékonyabbá, biztonságosabbá, gyorsabbá és jövőállóbbá válik.</p>
 
-                <div class="mt-4 text-balance">
-                    <h2 class="text-xl font-bold">Címstruktúra</h2>
-                    <p>Az IPv6 címek 128 bitesek, ami nagymértékben megnöveli a lehetséges címtartományt. Az IPv6 címek mérete és formátuma kiterjeszti a címzési képességet. 
+                <div class="mt-5 text-balance">
+                    <h2 class="text-xl font-bold mb-2">Címstruktúra</h2>
+                    <p> Az IPv6 címek 128 bitből állnak, ami nagymértékben megnöveli a lehetséges címtartományt.  Az IPv6-címeket 8 csoportra osztják, ahol minden csoport 4 hexadecimális számjegyből áll. A csoportokat kettősponttal választják el egymástól.
                     Az előnyben részesített IPv6 címábrázolás az <b>x:x:x:x:x:x:x:x</b>, ahol minden x a cím nyolc 16-bites részének hexadecimális értéke. 
                     Az IPv6 címek <b>0000:0000:0000:0000:0000:0000:0000:0000</b> és <b>ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff</b> között lehetnek.</p>
                 </div>
             </div>
             <div class="p-4 mr-15">
-                <img class="max-w-64 rounded-2xl float-right" src="https://cdn.discordapp.com/attachments/1174252511293616158/1226312203204825138/OIG2_2-topaz-low_resolution-4x.jpg?ex=66244f3d&is=6611da3d&hm=39d9c7099640dfa450aadb2f6a5b3df9d4f0a5c2559df135548fa59a1b62d357&" alt="">
+                <img class="max-w-64 rounded-2xl float-right mt-20" src="https://cdn.discordapp.com/attachments/1174252511293616158/1226312203204825138/OIG2_2-topaz-low_resolution-4x.jpg?ex=66244f3d&is=6611da3d&hm=39d9c7099640dfa450aadb2f6a5b3df9d4f0a5c2559df135548fa59a1b62d357&" alt="">
             </div>
         </div>
         <div class="p-4">
-            <h2>Az IPv6 címek több típusra oszthatóak:</h2>
-            <ul class="list-disc list-inside">
-                <li><b>Unicast címek:</b> Egy egyedi hálózati interfészt azonosítanak. <p class="ml-6">Az internetprotokoll az unicast címre küldött csomagokat a megfelelő egyedi interfésznek továbbítja.</p></li>
-                <li><b>Anycast címek:</b> Egy csoport interfészhez vannak hozzárendelve, amelyek általában különböző csomópontokhoz tartoznak. <p class="ml-6">Egy anycast címre küldött csomagot a tag-interfészek egyike kapja csak meg, általában a legközelebbi hoszt.</p></li>
+            <h2></h2>
+            <p>Az IPv6 címek számolása során a címeket hexadecimális formában ábrázolják, ahol minden hexadecimális számjegy 4 bitet képvisel. Ez azt jelenti, hogy minden hexadecimális számjegy 16 lehetséges értéket képvisel (0-9 és A-F), ami összesen 4 bitet jelent. Tehát egy 4 hexadecimális számjegyből álló csoport összesen 16^4, azaz 65,536 lehetséges értéket képvisel.</p>
+
+            <p class="mb-6">z IPv6 címek kiosztása során a címeket hierarchikusan osztják ki, ahol a bal oldali bitcsoportok a hálózati részt, míg a jobb oldali bitcsoportok a hoszt részt képviselik. Ez lehetővé teszi a címek logikus csoportosítását és az útválasztási hatékonyság növelését.</p>
+            <div class="flex bg-white rounded-2xl p-4">
+                <div class="">
+                    <img src="https://cdn.discordapp.com/attachments/1205431235564797992/1226837777728016485/1280px-IPv6_address_terminology-en.svg_.png?ex=662638b7&is=6613c3b7&hm=fb96cf2474f5ecbe0749af9e622b6e20e0713f7f6cdd014610cae4d461fd4066&" alt="">
+                </div>
+                <div class="">
+                    <img src="https://cdn.discordapp.com/attachments/1205431235564797992/1226837777019043872/750px-Ipv6_address.svg_.webp?ex=662638b7&is=6613c3b7&hm=cbfc40f5377d5fdbead33a424538129e14f4c7f7774b79b4234f3c2aa3c01044&" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="p-4">
+            <h2 class="text-xl font-bold mb-4">Az IPv6 címek több típusra oszthatóak:</h2>
+            <ul class="list-disc list-outside ml-5">
+                <li><b>Unicast címek:</b> Egy egyedi hálózati interfészt azonosítanak. Az internetprotokoll az unicast címre küldött csomagokat a megfelelő egyedi interfésznek továbbítja.</li>
+                <li><b>Anycast címek:</b> Egy csoport interfészhez vannak hozzárendelve, amelyek általában különböző csomópontokhoz tartoznak. Egy anycast címre küldött csomagot a tag-interfészek egyike kapja csak meg, általában a legközelebbi hoszt.</li>
                 <li><b>Multicast címek:</b> A multicast címre küldött csomag minden olyan interfészhez eljutnak, amely csatlakozik a megfelelő multicasthoz.</li>
             </ul>
         </div>
-        <div>
-            <p>Az ICMPv6 (Internet Control Message Protocol version 6) hibajelentési és diagnosztikai funkciókat lát el.</p>
-            <p>Az ICMPv6 üzenetek hibajelentő és információs üzenetekre oszthatóak. Az ICMPv6 üzeneteket IPv6 csomagok szállítják, amelyekben az IPv6 Next Header értéke az ICMPv6 számára 58-ra van beállítva.</p>
-            <div>
-                <p>Az ICMPv6 üzenetek a következő alapvető üzenettípusokat tartalmazzák:</p>
-                <ul>
-                    <li>Hibajelentő üzenetek:</li>
-                    <ul>
-                        <li>Célállomás elérhetetlen: Nincs útvonal a célállomáshoz, a célállomással való kommunikációt adminisztratív okokból tiltották, stb2.</li>
-                        <li>Csomag túl nagy: A csomag mérete meghaladja a hálózati útvonal maximális átviteli egységét2.</li>
-                        <li>Időtúllépés: Az élettartam lejárt, vagy a fragmentáció időkorlátja lejárt2.</li>
-                        <li>Paraméterprobléma: Hibás fejlécmező található a csomagban2.</li>
-                    </ul>
-                    <li>Információs üzenetek:</li>
-                    <ul>
-                        <li>Echo kérés: Ping kéréshez használt üzenet2.</li>
-                        <li>Echo válasz: Ping válaszhoz használt üzenet2.</li>
+        <div class="p-4">
+            <h2 class="text-xl font-bold mb-4">ICMPv6 (Internet Control Message Protocol version 6)</h2>
+            <p>Az ICMPv6 hibajelentési és diagnosztikai funkciókat látja el. Az ICMPv6 üzenetek hibajelentő és információs üzenetekre oszthatóak. Az ICMPv6 üzeneteket IPv6 csomagok szállítják, amelyekben az IPv6 Next Header értéke az ICMPv6 számára 58-ra van beállítva.</p>
+            <div class="mt-5">
+                <p class="font-bold text-xl mb-4">Az ICMPv6 üzenetek a következő alapvető üzenettípusokat tartalmazzák:</p>
+                <ul class="list-disc list-outside ml-5">
+                    <li class="font-bold text-xl mb-4">Hibajelentő üzenetek:</li>
+                        <ul class="list-disc list-outside ml-3">
+                            <li class="ml-6"><b>Célállomás elérhetetlen:</b> Nincs útvonal a célállomáshoz, a célállomással való kommunikációt adminisztratív okokból tiltották.</li>
+                            <li class="ml-6"><b>Csomag túl nagy:</b> A csomag mérete meghaladja a hálózati útvonal maximális átviteli egységét.</li>
+                            <li class="ml-6"><b>Időtúllépés:</b> Az élettartam lejárt, vagy a fragmentáció időkorlátja lejárt.</li>
+                            <li class="ml-6"><b>Paraméterprobléma:</b> Hibás fejlécmező található a csomagban.</li>
+                        </ul>
+                    <li class="font-bold text-xl mt-4">Információs üzenetek:</li>
+                    <ul class="list-disc list-outside ml-3">
+                        <li class="ml-6"><b>Echo kérés:</b> Ping kéréshez használt üzenet.</li>
+                        <li class="ml-6"><b>Echo válasz:</b> Ping válaszhoz használt üzenet.</li>
                     </ul>
                 </ul>
             </div>
+        </div>
+        <div class="p-4">
+            <h2 class="text-xl font-bold mb-4">Az IPv6 Neighbor Discovery Protocol (NDP)</h2>
+            <p class="mb-3">Az ICMPv6 részeként működő Neighbor Discovery Protocol (NDP) az IPv6 hálózatokban használt kulcsfontosságú protokoll. Az NDP az alábbi funkciókat látja el:</p>
+            <ul class="list-disc list-outside ml-5">
+                <li><b>Router Solicitation (Type 133):</b>A hosztok ezzel az üzenettel kérdezik le a hálózaton található útválasztókat.</li>
+                <li><b>Router Advertisement (Type 134):</b>Az útválasztók ezzel az üzenettel hirdetik meg jelenlétüket és a hálózati paramétereket.</li>
+                <li><b>Neighbor Solicitation (Type 135):</b> Amikor egy csomópontnak szüksége van egy ismert IPv6 cím fizikai címének meghatározására, akkor ezt az üzenetet küldi ki a hálózati szegmensre.</li>
+                <li><b>Neighbor Advertisement (Type 136):</b>Ezt az üzenetet a csomópontok válaszként küldik a Neighbor Solicitation üzenetre.</li>
+                <li><b>Redirect Message (Type 137):</b>Az útválasztók ezzel az üzenettel irányítják át a csomagokat, ha jobb útvonalat találnak.</li>
+            </ul>
+        </div>
+        <div class="p-4">
+            <h2 class="text-xl font-bold mb-4">Az IPv6 Routing protokollok</h2>
+            <ul class="list-disc list-outside ml-5">
+                <li><b>RIPv2</b> <i>(Routing Information Protocol)</i>: Ez egy egyszerű távolság-vektor alapú routing protokoll.</li>
+                <li><b>EIGRP</b> <i>(Enhanced Interior Gateway Routing Protocol)</i>: Ez egy Cisco által kifejlesztett fejlett belső gateway routing protokoll.</li>
+                <li><b>OSPFv3</b> <i>(Open Shortest Path First version 3)</i>: Ez az OSPF protokoll IPv6-ra kiterjesztett változata.</li>
+                <li><b>ISIS</b> <i>(Intermediate System to Intermediate System)</i>: Ez egy link állapotú protokoll, amelyet nagy hálózatokban használnak.</li>
+                <li><b>BGPv4</b> <i>(Border Gateway Protocol version 4)</i>: Ez egy külső gateway protokoll, amelyet az internetes útválasztásban használnak.</li>
+            </ul>
+            <p class="mt-3">Ezek a protokollok lehetővé teszik az IPv6 hálózatok számára, hogy dinamikusan tanulják és frissítsék az útvonalakat.</p>
+        </div>
+        <div class="p-4">
+            <div class="flex">
+                <div>
+                    <img class="max-w-72 rounded-2xl float-right" src="https://cdn.discordapp.com/attachments/1205431235564797992/1226823233173721149/OIG3-topaz-low_resolution-4x.jpg?ex=66262b2c&is=6613b62c&hm=619959ae4141f0e7fd92263e628b3d270bb815d46d076d937a7917de2bb1e1d2&" alt="">
+                </div>
+                <div class="ml-12">
+                    <h2 class="text-xl font-bold mb-4">Biztonság</h2>
+                    <p class="font-bold">Az IPv6 biztonsági kihívásai:</p>
+                    <ul class="list-disc list-outside ml-5">
+                        <li><b>Bonyolultság:</b> Az IPv6 címzési rendszere és a fejlettebb funkciók, mint például az Extension Headers, bonyolultabbá teszik a hálózatot, ami növeli a hibák és a biztonsági rések kockázatát.</li>
+                        <li><b>Új protokollok:</b>Az IPv6 új protokollokat vezet be, mint például az ICMPv6 és a NDP, amelyek új biztonsági kihívásokat jelentenek.</li>
+                        <li><b>Dual Stack és átmeneti technológiák:</b>A dual stack és az átmeneti technológiák, amelyek lehetővé teszik az IPv4 és az IPv6 együttes használatát, további biztonsági kihívásokat jelentenek.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="flex mt-8">
+                <div>
+                    <h2 class="font-bold text-xl mb-2">Az IPv6-ban alkalmazott biztonsági technológiák:</h2>
+                    <ul class="list-disc list-outside ml-5">
+                        <li><b>Encrypted Preshared Key:</b>Az Encrypted Preshared Key lehetővé teszi a pre-shared kulcsok titkosítását.</li>
+                        <li><b>Transform sets:</b>A transform sets meghatározzák az IPsec titkosítási és hitelesítési algoritmusait.</li>
+                        <li><b>IPSec Dead Peer Detection:</b>Az IPSec Dead Peer Detection lehetővé teszi a nem válaszoló IPsec peer-ek észlelését.</li>
+                        <li><b>IPsec Anti-replay Window:</b>Az IPsec Anti-replay Window megakadályozza a replay támadásokat azáltal, hogy csak a sorrendben érkező csomagokat fogadja el.</li>
+                        <li><b>IPSec Virtual Tunnel Interfaces:</b>Az IPSec Virtual Tunnel Interfaces lehetővé teszi az IPsec VPN-tunnel konfigurálását egy virtuális interfészen keresztül.</li>
+                        <li><b>Internet Key Exchange (IKE):</b>Az IKE protokoll lehetővé teszi az IPsec VPN-tunnel kulcsainak automatikus kezelését.</li>
+                    </ul>
+                </div>
+                <div class="ml-12 max-w-sm">
+                    <h2 class="font-bold text-xl mb-2">Az IPsec</h2>
+                    <p>Az IPv6-ban alkalmazott biztonsági technológiák között szerepel az IPsec. Az IPsec egy protokollcsomag, amely titkosítást és hitelesítést biztosít az IP-csomagok számára. Az IPsec lehetővé teszi az adatok biztonságos továbbítását nyílt hálózatokon, mint például az interneten.</p>
+                    <p class="font-bold mb-2">Az IPsec alapvetően két módban működhet:</p> 
+                    <ul class="list-disc list-outside ml-5">
+                        <li>Transzportmód</li>
+                        <li>Alagútmód</li>
+                    </ul>
+                    <p class="mt-2">A transzportmód csak az IP-csomag adatrészét titkosítja, míg az alagútmód az egész IP-csomagot titkosítja.</p>
+                </div>
+            </div>
+        </div>
+        <div class="p-4">
+
         </div>
     </main>
 </body>
 </html>
 
-
-Az ICMPv6 üzenetek a következő alapvető üzenettípusokat tartalmazzák2:
-
-Hibajelentő üzenetek:
-Célállomás elérhetetlen: Nincs útvonal a célállomáshoz, a célállomással való kommunikációt adminisztratív okokból tiltották, stb2.
-Csomag túl nagy: A csomag mérete meghaladja a hálózati útvonal maximális átviteli egységét2.
-Időtúllépés: Az élettartam lejárt, vagy a fragmentáció időkorlátja lejárt2.
-Paraméterprobléma: Hibás fejlécmező található a csomagban2.
-Információs üzenetek:
-Echo kérés: Ping kéréshez használt üzenet2.
-Echo válasz: Ping válaszhoz használt üzenet2.
+<li><b>asd</b> <i>asd</i> <u>asd</u></li>
