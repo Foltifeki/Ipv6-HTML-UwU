@@ -80,18 +80,25 @@
         <div class="p-4">
             <h2 class="text-2xl font-bold mb-4">Az IPv6 Címek Felépítése és Értelmezése</h2>
             <p class="mb-4">A z IPv6 cím <b class="bg-white/75 dark:bg-black/60 rounded-md p-1 mx-2"> <a class="p-2">2001:0db8:85a3:0000:0000:8a2e:0370:7334</a></b> hextetjei a következők:</p>
-            <ul>
-                <li class="mb-3"> <p> <span class="font-medium bg-white/75 dark:bg-black/60 rounded-md p-1 mx-2"> <a class="p-2">2001:</a></span> Ez az első hextet, ami a globális egyedi azonosító (Global Unicast Address, GUA) része. A 2001 érték azt jelenti, hogy ez a cím a globális egyedi címek (2000::/3) tartományába tartozik. </p> </li>
-                <li class="mb-3"> <p> <span class="font-medium bg-white/75 dark:bg-black/60 rounded-md p-1 mx-2"> <a class="p-2">0db8:</a></span> Ez a második hextet, ami szintén a GUA része. A 0db8 érték speciális, mert a 2001:0db8::/32 tartományt a dokumentációhoz használják. Ez azt jelenti, hogy ezeket a címeket példákban és dokumentációban használják, és nem használhatók valós hálózati forgalomban. </p> </li>
-                <li class="mb-3"> <p> <span class="font-medium bg-white/75 dark:bg-black/60 rounded-md p-1 mx-2"> <a class="p-2">2001:</a></span> Ez az első hextet, ami a globális egyedi azonosító (Global Unicast Address, GUA) része. A 2001 érték azt jelenti, hogy ez a cím a globális egyedi címek (2000::/3) tartományába tartozik. </p> </li>
+            <ul class="">
+                <li class="mb-3"> <p> <span class="font-medium bg-white/75 dark:bg-black/60 rounded-md p-1 mx-2"> <a class="p-2">2001:</a></span> <br> Ez az első hextet, ami a globális egyedi azonosító (Global Unicast Address, GUA) része. A 2001 érték azt jelenti, hogy ez a cím a globális egyedi címek (2000::/3) tartományába tartozik.</p> </li>
+
+                <li class="mb-3"> <p> <span class="font-medium bg-white/75 dark:bg-black/60 rounded-md p-1 mx-2"> <a class="p-2">0db8:</a></span> <br> Ez a második hextet, ami szintén a GUA része. A 0db8 érték speciális, mert a 2001:0db8::/32 tartományt a dokumentációhoz használják. Ez azt jelenti, hogy ezeket a címeket példákban és dokumentációban használják, és nem használhatók valós hálózati forgalomban.</p> </li>
+
+                <li class="mb-3"> <p> <span class="font-medium bg-white/75 dark:bg-black/60 rounded-md p-1 mx-2"> <a class="p-2">0db8:</a></span> <br> Ez a második hextet, ami szintén a GUA része. A 0db8 érték speciális, mert a 2001:0db8::/32 tartományt a dokumentációhoz használják. Ez azt jelenti, hogy ezeket a címeket példákban és dokumentációban használják, és nem használhatók valós hálózati forgalomban.</p> </li>
+                
+                <li class="mb-3"> <p> <span class="font-medium bg-white/75 dark:bg-black/60 rounded-md p-1 mx-2"> <a class="p-2">85a3:</a></span> <br> Ez a harmadik hextet, ami a GUA része. Ezt a részt általában az internetszolgáltatók használják az alhálózatok azonosítására.</p> </li>
+
+                <li class="mb-3"> <p> <span class="font-medium bg-white/75 dark:bg-black/60 rounded-md p-1 mx-2"> <a class="p-2">0000:</a></span> <br> Ez a negyedik hextet, ami a GUA része. Ezt a részt általában az internetszolgáltatók használják az alhálózatok azonosítására.</p> </li>
+
+                <li class="mb-3"> <p> <span class="font-medium bg-white/75 dark:bg-black/60 rounded-md p-1 mx-2"> <a class="p-2">0000:</a></span> <br> Ez az ötödik hextet, ami a csomópont azonosító (Interface Identifier, IID) része. Ezt a részt általában a hálózati eszközök, mint például a routerek és a számítógépek használják az egyedi azonosításra a hálózaton belül.</p> </li>
+
+                <li class="mb-3"> <p> <span class="font-medium bg-white/75 dark:bg-black/60 rounded-md p-1 mx-2"> <a class="p-2">8a2e:</a></span> <br> Ez a hatodik hextet, ami az IID része. Ezt a részt általában a hálózati eszközök használják az egyedi azonosításra a hálózaton belül.</p> </li>
+
+                <li class="mb-3"> <p> <span class="font-medium bg-white/75 dark:bg-black/60 rounded-md p-1 mx-2"> <a class="p-2">0370:</a></span> <br> Ez a hetedik hextet, ami az IID része. Ezt a részt általában a hálózati eszközök használják az egyedi azonosításra a hálózaton belül.</p> </li>
+
+                <li class="mb-3"> <p> <span class="font-medium bg-white/75 dark:bg-black/60 rounded-md p-1 mx-2"> <a class="p-2">7334:</a></span> <br> Ez a nyolcadik és utolsó hextet, ami az IID része. Ezt a részt általában a hálózati eszközök használják az egyedi azonosításra a hálózaton belül.</p> </li>
             </ul>
-0db8: Ez a második hextet, ami szintén a GUA része. A 0db8 érték speciális, mert a 2001:0db8::/32 tartományt a dokumentációhoz használják. Ez azt jelenti, hogy ezeket a címeket példákban és dokumentációban használják, és nem használhatók valós hálózati forgalomban.
-85a3: Ez a harmadik hextet, ami a GUA része. Ezt a részt általában az internetszolgáltatók használják az alhálózatok azonosítására.
-0000: Ez a negyedik hextet, ami a GUA része. Ezt a részt általában az internetszolgáltatók használják az alhálózatok azonosítására.
-0000: Ez az ötödik hextet, ami a csomópont azonosító (Interface Identifier, IID) része. Ezt a részt általában a hálózati eszközök, mint például a routerek és a számítógépek használják az egyedi azonosításra a hálózaton belül.
-8a2e: Ez a hatodik hextet, ami az IID része. Ezt a részt általában a hálózati eszközök használják az egyedi azonosításra a hálózaton belül.
-0370: Ez a hetedik hextet, ami az IID része. Ezt a részt általában a hálózati eszközök használják az egyedi azonosításra a hálózaton belül.
-7334: Ez a nyolcadik és utolsó hextet, ami az IID része. Ezt a részt általában a hálózati eszközök használják az egyedi azonosításra a hálózaton belül.
         </div>
         <div class="p-4 mt-10">
             <h2 class="text-2xl font-bold mb-4">ICMPv6 (Internet Control Message Protocol version 6)</h2>
