@@ -78,29 +78,132 @@
             </ul>
         </div>
         <div class="p-4">
+            <div class="flex">
+                <div class="max-w-2xl mr-6">
+                    <h2 class="text-xl font-bold">Global Unicast Address (GUA)</h2>
+                    <p class="mt-4 mb-2">A Global Unicast Address (GUA) az IPv6 címek egy típusa, amelyek globálisan egyediek és útválaszthatók az IPv6 interneten. Ezek megfelelnek a nyilvános IPv4 címeknek.</p>
+
+                    <p class="mb-4">A GUA címeket általában internetszolgáltatók osztják ki, és ezeket használják az interneten történő kommunikációhoz.</p>
+                    
+                    <p class="mb-1 font-bold">A GUA címek struktúrája a következő:</p>
+                    
+                    <ul class="list-decimal list-outside ml-5 text-balance">
+                        <li class="mb-2"><b>Globális útválasztási előtag:</b> Ez a cím része, amelyet az internetszolgáltató, például egy ISP, rendel hozzá egy ügyfélhez vagy helyszínhez. A legjelentősebb 48 bitet globális útválasztási előtagként rendelik hozzá, amely egy adott autonóm rendszerhez van rendelve.</li>
+
+                        <li class="mb-2"><b>Alhálózati ID:</b> Az alhálózati ID a globális útválasztási előtag és az interfész ID közötti rész.</li>
+
+                        <li class="mb-2"><b>Interfész ID:</b> Az Interfész ID egyenértékű az IPv4 címek host részével. Ajánlott, hogy a legtöbb esetben /64-es alhálózatokat használjunk, amelyek 64 bites ID-t hoznak létre.</li>
+                    </ul>
+                    
+                    <p class="mt-4 mb-2">Ez a struktúra lehetővé teszi a hálózati hierarchia és a címek logikus csoportosításának kifejezését, ami megkönnyíti a hálózati tervezést és menedzsmentet. Az IPv6 címek hossza és struktúrája is hozzájárul a hálózati biztonsághoz és hatékonysághoz.</p>
+                </div>
+                <div class="max-w-lg">
+                    <h2 class="text-xl font-bold mb-4">Interface Identifier (IID)</h2>
+                    <p class="mb-4">Az Interface Identifier (IID) egy egyedi azonosító, amelyet egy hálózati interfészhez rendelnek, hogy azonosítsák azt a hálózaton. Az IID-ket általában a hálózati eszközök, mint például a routerek és a számítógépek használják az egyedi azonosításra a hálózaton belül.</p>
+
+                    <p class="mb-4">Az IPv6 címekben az IID a cím második felét képezi, amely az adott eszközt azonosítja a hálózaton. Az interfész azonosítót általában a készülék MAC címének felhasználásával hozzák létre, amely egy egyedi azonosító, amelyet a gyártó rendel a készülékhez. Azonban lehetséges más módszerek alkalmazása is az interfész azonosítók generálására, mint például a véletlenszám-generálás vagy a hardver-specifikus információk használata.</p>
+                    
+                    <p class="mb-4">Az IID-ket a link-local és néhány globális címek használják az IPv6 cím utolsó 64 bites részében. Az IID-ket általában a link-rétegű MAC címekből képzik az EUI-64 formátum módosításával, vagy egy randomizált folyamat segítségével, amit tipikusan az Apple operációs rendszerekben láthatunk ma.</p>
+
+                    <p class="mb-4">Az IID-k használata az IPv6 címekben nagyobb rugalmasságot tesz lehetővé a hálózati tervezésben, mivel lehetővé teszi az eszközök hatékonyabb azonosítását és címzését. Például lehetővé teszi több hálózati előtag használata egyetlen eszközön, ami hasznos lehet olyan helyzetekben, ahol a hálózat különböző részeinek eltérő kapcsolódási követelményei vannak.</p>
+                </div>
+            </div>
+        </div>
+        <div class="p-4 text-balance">
             <h2 class="text-2xl font-bold mb-4">Az IPv6 Címek Felépítése és Értelmezése</h2>
             <p class="mb-4">A z IPv6 cím <b class="bg-white/75 dark:bg-black/60 rounded-md p-1 mx-2"> <a class="p-2">2001:0db8:85a3:0000:0000:8a2e:0370:7334</a></b> hextetjei a következők:</p>
             <ul class="">
-                <li class="mb-3"> <p> <span class="font-medium bg-white/75 dark:bg-black/60 rounded-md p-1 mx-2"> <a class="p-2">2001:</a></span> <br> Ez az első hextet, ami a globális egyedi azonosító (Global Unicast Address, GUA) része. A 2001 érték azt jelenti, hogy ez a cím a globális egyedi címek (2000::/3) tartományába tartozik.</p> </li>
+                <li class="mb-3"> 
+                    <p> 
+                        <span class="font-medium bg-white/75 dark:bg-black/60 rounded-md p-1 mx-2"> <a class="p-2">2001:</a>
+                        </span> 
+                        <br> 
+                        <p class="ml-6 mt-4 mb-6">Ez az első hextet, ami a globális egyedi azonosító (Global Unicast Address, GUA) része. A 2001 érték azt jelenti, hogy ez a cím a globális egyedi címek (2000::/3) tartományába tartozik.</p>
+                    </p> 
+                </li>
 
-                <li class="mb-3"> <p> <span class="font-medium bg-white/75 dark:bg-black/60 rounded-md p-1 mx-2"> <a class="p-2">0db8:</a></span> <br> Ez a második hextet, ami szintén a GUA része. A 0db8 érték speciális, mert a 2001:0db8::/32 tartományt a dokumentációhoz használják. Ez azt jelenti, hogy ezeket a címeket példákban és dokumentációban használják, és nem használhatók valós hálózati forgalomban.</p> </li>
+                <li class="mb-3">
+                    <p>
+                        <span class="font-medium bg-white/75 dark:bg-black/60 rounded-md p-1 mx-2"> 
+                            <a class="p-2">0db8:</a>
+                        </span> 
+                        <br>
+                        <p class="ml-6 mt-4 mb-6">Ez a második hextet, ami szintén a GUA része. A 0db8 érték speciális, mert a 2001:0db8::/32 tartományt a dokumentációhoz használják. Ez azt jelenti, hogy ezeket a címeket példákban és dokumentációban használják, és nem használhatók valós hálózati forgalomban.</p>
+                    </p>
+                </li>
 
-                <li class="mb-3"> <p> <span class="font-medium bg-white/75 dark:bg-black/60 rounded-md p-1 mx-2"> <a class="p-2">0db8:</a></span> <br> Ez a második hextet, ami szintén a GUA része. A 0db8 érték speciális, mert a 2001:0db8::/32 tartományt a dokumentációhoz használják. Ez azt jelenti, hogy ezeket a címeket példákban és dokumentációban használják, és nem használhatók valós hálózati forgalomban.</p> </li>
+                <li class="mb-3">
+                    <p>
+                        <span class="font-medium bg-white/75 dark:bg-black/60 rounded-md p-1 mx-2"> 
+                            <a class="p-2">0db8:</a>
+                        </span>
+                        <br>
+                        <p class="ml-6 mt-4 mb-6">Ez a második hextet, ami szintén a GUA része. A 0db8 érték speciális, mert a 2001:0db8::/32 tartományt a dokumentációhoz használják. Ez azt jelenti, hogy ezeket a címeket példákban és dokumentációban használják, és nem használhatók valós hálózati forgalomban.</p>
+                    </p>
+                </li>
                 
-                <li class="mb-3"> <p> <span class="font-medium bg-white/75 dark:bg-black/60 rounded-md p-1 mx-2"> <a class="p-2">85a3:</a></span> <br> Ez a harmadik hextet, ami a GUA része. Ezt a részt általában az internetszolgáltatók használják az alhálózatok azonosítására.</p> </li>
+                <li class="mb-3">
+                    <p>
+                        <span class="font-medium bg-white/75 dark:bg-black/60 rounded-md p-1 mx-2"> 
+                            <a class="p-2">85a3:</a>
+                        </span> 
+                        <br> 
+                        <p class="ml-6 mt-4 mb-6">Ez a harmadik hextet, ami a GUA része. Ezt a részt általában az internetszolgáltatók használják az alhálózatok azonosítására.</p>
+                    </p>
+                </li>
 
-                <li class="mb-3"> <p> <span class="font-medium bg-white/75 dark:bg-black/60 rounded-md p-1 mx-2"> <a class="p-2">0000:</a></span> <br> Ez a negyedik hextet, ami a GUA része. Ezt a részt általában az internetszolgáltatók használják az alhálózatok azonosítására.</p> </li>
+                <li class="mb-3">
+                    <p>
+                        <span class="font-medium bg-white/75 dark:bg-black/60 rounded-md p-1 mx-2">
+                            <a class="p-2">0000:</a>
+                        </span>
+                        <br>
+                        <p class="ml-6 mt-4 mb-6">Ez a negyedik hextet, ami a GUA része. Ezt a részt általában az internetszolgáltatók használják az alhálózatok azonosítására.</p>
+                    </p>
+                </li>
 
-                <li class="mb-3"> <p> <span class="font-medium bg-white/75 dark:bg-black/60 rounded-md p-1 mx-2"> <a class="p-2">0000:</a></span> <br> Ez az ötödik hextet, ami a csomópont azonosító (Interface Identifier, IID) része. Ezt a részt általában a hálózati eszközök, mint például a routerek és a számítógépek használják az egyedi azonosításra a hálózaton belül.</p> </li>
+                <li class="mb-3">
+                    <p>
+                        <span class="font-medium bg-white/75 dark:bg-black/60 rounded-md p-1 mx-2">
+                            <a class="p-2">0000:</a>
+                        </span>
+                        <br>
+                        <p class="ml-6 mt-4 mb-6">Ez az ötödik hextet, ami a csomópont azonosító (Interface Identifier, IID) része. Ezt a részt általában a hálózati eszközök, mint például a routerek és a számítógépek használják az egyedi azonosításra a hálózaton belül.</p>
+                    </p>
+                </li>
 
-                <li class="mb-3"> <p> <span class="font-medium bg-white/75 dark:bg-black/60 rounded-md p-1 mx-2"> <a class="p-2">8a2e:</a></span> <br> Ez a hatodik hextet, ami az IID része. Ezt a részt általában a hálózati eszközök használják az egyedi azonosításra a hálózaton belül.</p> </li>
+                <li class="mb-3">
+                    <p>
+                        <span class="font-medium bg-white/75 dark:bg-black/60 rounded-md p-1 mx-2">
+                            <a class="p-2">8a2e:</a>
+                        </span>
+                        <br>
+                        <p class="ml-6 mt-4 mb-6">Ez a hatodik hextet, ami az IID része. Ezt a részt általában a hálózati eszközök használják az egyedi azonosításra a hálózaton belül.</p>
+                    </p>
+                </li>
 
-                <li class="mb-3"> <p> <span class="font-medium bg-white/75 dark:bg-black/60 rounded-md p-1 mx-2"> <a class="p-2">0370:</a></span> <br> Ez a hetedik hextet, ami az IID része. Ezt a részt általában a hálózati eszközök használják az egyedi azonosításra a hálózaton belül.</p> </li>
+                <li class="mb-3">
+                    <p>
+                        <span class="font-medium bg-white/75 dark:bg-black/60 rounded-md p-1 mx-2">
+                            <a class="p-2">0370:</a>
+                        </span>
+                        <br>
+                        <p class="ml-6 mt-4 mb-6">Ez a hetedik hextet, ami az IID része. Ezt a részt általában a hálózati eszközök használják az egyedi azonosításra a hálózaton belül.</p>
+                    </p>
+                </li>
 
-                <li class="mb-3"> <p> <span class="font-medium bg-white/75 dark:bg-black/60 rounded-md p-1 mx-2"> <a class="p-2">7334:</a></span> <br> Ez a nyolcadik és utolsó hextet, ami az IID része. Ezt a részt általában a hálózati eszközök használják az egyedi azonosításra a hálózaton belül.</p> </li>
+                <li class="mb-3">
+                    <p>
+                        <span class="font-medium bg-white/75 dark:bg-black/60 rounded-md p-1 mx-2">
+                            <a class="p-2">7334:</a>
+                        </span>
+                        <br>
+                        <p class="ml-6 mt-4">Ez a nyolcadik és utolsó hextet, ami az IID része. Ezt a részt általában a hálózati eszközök használják az egyedi azonosításra a hálózaton belül.</p>
+                    </p>
+                </li>
             </ul>
         </div>
-        <div class="p-4 mt-10">
+        <div class="p-4 mt-6">
             <h2 class="text-2xl font-bold mb-4">ICMPv6 (Internet Control Message Protocol version 6)</h2>
             <p>Az ICMPv6 hibajelentési és diagnosztikai funkciókat látja el. Az ICMPv6 üzenetek hibajelentő és információs üzenetekre oszthatóak. Az ICMPv6 üzeneteket IPv6 csomagok szállítják, amelyekben az IPv6 Next Header értéke az ICMPv6 számára 58-ra van beállítva.</p>
             <div class="mt-5">
